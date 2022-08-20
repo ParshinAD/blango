@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+  <a href="https://getbootstrap.com/docs/5.0/layout/grid/"> Different grid columns doc</a>
+  <div class="row">
+      <div class="col-6 bg-primary">Column 1</div>
+      <div class="col bg-danger">Column 2</div>
+      <div class="col bg-success">Column 3</div>
+  </div>
+  <p>let's add min weight</p>
+  <div class="row">
+    <div class="col-md bg-primary">Column 1</div>
+    <div class="col-md bg-danger">Column 2</div>
+    <div class="col-md bg-success">Column 3</div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-6 bg-primary">Column 1</div>
+    <div class="col-xs-12 col-sm-2 col-md-2 bg-danger">Column 2</div>
+    <div class="col bg-success">Column 3</div>
+  </div>
+{% endblock %}
