@@ -47,13 +47,13 @@ class Dev(Configuration):
     # Application definition
 
     INSTALLED_APPS = [
+        'blango_auth',
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        'blango_auth',
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
@@ -195,6 +195,12 @@ class Dev(Configuration):
     # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+    EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+    EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+    ACCOUNT_ACTIVATION_DAYS = 7
+
+    REGISTRATION_OPEN = True
 
 class Prod(Dev):
     DEBUG = False
