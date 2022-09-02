@@ -39,6 +39,8 @@ class Dev(Configuration):
     SESSION_COOKIE_SAMESITE = 'None'
 
     INTERNAL_IPS = ["192.168.11.179"]
+    
+    # change default user model on custom
     AUTH_USER_MODEL = "blango_auth.User"
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
